@@ -1,18 +1,36 @@
+:root {
+  --background: #282c34;
+  --color-plain: #abb2bf;
+  --color-comment: #5c6370;
+}
+
 body {
   height: 100vh;
-  overflow: hidden;
   padding: 0;
   margin: 0;
   background: #282c34;
   font-size: 16px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
-    Arial, sans-serif;
+}
+
+.textdisplay {
+  height: 100%;
+  box-sizing: border-box;
+  padding: 5px;
+  background: var(--background);
+  color: var(--color-plain);
+  font-family: 'Fira Code', Consolas, 'Courier New', monospace;
+}
+
+pre {
+  font-family: inherit;
+  margin: 0;
 }
 
 textarea {
   display: block;
-  background: #282c34;
-  color: #abb2bf;
+  position: absolute;
+  background: transparent;
+  color: transparent;
   resize: none;
   box-sizing: border-box;
   padding: 5px;
@@ -20,6 +38,7 @@ textarea {
   width: 100%;
   height: 100%;
   border: 0;
+  font-size: inherit;
   font-family: 'Fira Code', Consolas, 'Courier New', monospace;
 }
 
