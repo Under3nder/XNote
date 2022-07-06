@@ -1,3 +1,6 @@
+# Notes
+*.note
+
 # Logs
 logs
 *.log
