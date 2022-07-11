@@ -1,5 +1,6 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, Menu } = require('electron');
 const path = require('path');
+const { myMenu } = require('./menu.js');
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 // eslint-disable-next-line global-require
@@ -13,9 +14,14 @@ const createWindow = () => {
     width: 800,
     height: 600,
     webPreferences: {
+      //nodeIntegration: true,
+      //contextIsolation: false,
       preload: path.join(__dirname, 'preload.js'),
     },
   });
+
+  // Menu
+  Menu.setApplicationMenu(myMenu(mainWindow));
 
   // and load the index.html of the app.
   mainWindow.loadFile(path.join(__dirname, 'index.html'));
