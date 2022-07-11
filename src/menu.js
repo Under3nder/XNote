@@ -12,7 +12,7 @@ const isMac = process.platform === 'darwin'
 const template = [
   // { role: 'editMenu' }
   {
-    label: 'Edit',
+    label: '&Edit',
     submenu: [
       { role: 'undo' },
       { role: 'redo' },
@@ -41,7 +41,7 @@ const template = [
   },
   // { role: 'viewMenu' }
   {
-    label: 'View',
+    label: '&View',
     submenu: [
       { role: 'reload' },
       { role: 'forceReload' },
@@ -56,7 +56,7 @@ const template = [
   },
   // { role: 'windowMenu' }
   {
-    label: 'Window',
+    label: '&Window',
     submenu: [
       { role: 'minimize' },
       { role: 'zoom' },
@@ -75,7 +75,7 @@ const menu = Menu.buildFromTemplate(template);
 
 // File MenuItem
 const file = new MenuItem({
-  label: 'File',
+  label: '&File',
   submenu: [
     { label: 'New', accelerator: 'CmdOrCtrl+N', click: () => { mainWindow.webContents.send('get-file', 'new-file') } },
     { label: 'Open', accelerator: 'CmdOrCtrl+O', click: () => { mainWindow.webContents.send('get-file', 'open-file') } },

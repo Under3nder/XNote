@@ -5,9 +5,4 @@ class File {
     this.modified = false;
   }
 }
-
-try {
-  exports.File = File;
-} catch (e) {
-  // do nothing
-}
+exports.File = File;
